@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    container_name: key-value-fastapi
+    network_mode: host
+    ports:
+      - "8080:000"
+    command: bash -c "uvicorn main:app"
+
